@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, #1df8e4, #2fffc3, #69ff97, #a2ff60, #dcff00);
+}
