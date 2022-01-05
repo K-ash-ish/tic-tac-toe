@@ -17,6 +17,8 @@ body{
     text-align: center;
     letter-spacing: 4px;
     text-shadow: 3px 0 2px #ccc;
+    display: flex;
+    flex-direction: column;
 }
 header h1{
     color: #F9F871;
@@ -37,6 +39,7 @@ button{
     justify-content: space-evenly;
 }
 #winning-section{
+    display: none;
     color: #ffffff;
     margin: 1em 0;
     background-color: #FFE171;
@@ -59,19 +62,22 @@ button{
     box-shadow: 7px 7px 10px rgb(138, 135, 135);
 }
 .turn-message{
+    display: none;
     margin: 1em 0;
 }
-/* /*  */
+
 .game-board{
-    visibility: hidden;
+    display: none;
     border: 1px solid red;
     max-width: 30rem;
     height: 30rem;
-    margin: 0 auto;
-} 
+    margin: 1em auto;
+}
 
 footer{
-    margin: 1em 0;
+    bottom: 0;
+    width: 100%;
+    margin-top:auto;
     padding: 1em 0;
     background-color: rgb(255, 255, 255);
 }
