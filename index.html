@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
     <header>
@@ -13,12 +14,12 @@
     </header>
 
     <main class="container">
-        <section id="score-section">
-            <p>Player 1: </p>
-            <p>Player 2: </p>
+        <section id="player-section">
+            <p>Player 1: <i class="fas fa-times"></i> </p>
+            <p>Player 2: <i class="far fa-circle"></i> </p>
         </section>
     
-        <section id="winning-section">
+        <section class="winning-section">
             <h2>Player 1 Won! </h2>
         </section>
 
@@ -30,7 +31,16 @@
                 <p>Player 1 turn</p>
             </div>
             <div class="game-board">
-
+                <div class="tile tile-row-border"></div>
+                <div class="tile tile-border tile-row-border"></div>
+                <div class="tile tile-row-border"></div>
+                <div class="tile tile-row-border"></div>
+                <div class="tile tile-row-border tile-border"></div>
+                <div class="tile tile-row-border"></div>
+                <div class="tile"></div>
+                <div class="tile tile-border"></div>
+                <div class="tile "></div>
+                
             </div>
             
         </section>
