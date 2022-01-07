@@ -1,12 +1,22 @@
-// const startGame = document.querySelector(".start-btn");
-// const winningSection = document.querySelector(".winning-section");
 
-// startGame.addEventListener('click', ()=>{
-//     winningSection.classList.add("winning-section-show");
-//     setTimeout(() => {
-//         winningSection.classList.remove("winning-section-show")
-//     }, 2000);
-//     console.log(winningSection)
-// })
+const DomElements = ()=>{
+    const restartBtn = document.querySelector(".restart-btn");
+    const turnMessage = document.querySelector(".turn-message");
+    const gameTile = document.querySelectorAll(".tile");
+    const win = document.querySelector(".winning-section");
+
+    return{restartBtn, turnMessage, gameTile, win};
+};
+
+const playerFactory = ()=>{
+    let player1 = "X";
+    let player2 = "O";
+}
+
+const gameBoard = (()=>{
+    
+});
 
 
+
+DomElements();

@@ -36,9 +36,9 @@ button{
     color: #f56f46;
 }
 
-.start-btn{
+.restart-btn{
     padding: 0.7em 2em;
-    margin: 1em 0;
+    margin: 2em 0;
     cursor: pointer;
     border: none;
     border-radius: 2rem;
@@ -47,7 +47,13 @@ button{
     box-shadow: 5px 5px 10px rgb(138, 135, 135);
     transition: letter-spacing 0.7s;
 }
-.start-btn:hover{
+.game-status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.restart-btn:hover{
     transition: 0.7s;
     letter-spacing: 6px;
     box-shadow: 7px 7px 10px rgb(138, 135, 135);
@@ -60,12 +66,9 @@ button{
     display: flex;
     justify-content: space-evenly;
 }
-
 .winning-section{
-    /* display: none; */
-    
-    position:absolute;
-    opacity: 0;
+    display: none;
+    width: 100%;
     color: #ffffff;
     margin: 1em 0;
     background-color: #FFE171;
@@ -73,9 +76,7 @@ button{
     transition: position 1s;
 }
 .winning-section-show{
-    position: static;
-    opacity: 1;
-    transition: opacity 1s linear;
+    display: block;
 }
 
 .turn-message{
@@ -86,7 +87,7 @@ button{
     display: block;
 }
 .game-board{
-    /* display: none; */
+    /* border: 1px solid red; */
     max-width: 25rem;
     height: 25rem;
     margin: 2em auto;

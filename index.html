@@ -19,18 +19,17 @@
             <p>Player 2: <i class="far fa-circle"></i> </p>
         </section>
     
-        <section class="winning-section">
-            <h2>Player 1 Won! </h2>
-        </section>
-
         <section id="game-section">
-            <div class="start-game">
-                <button class="start-btn">Start Game</button>
+            <div class="game-status">
+                <div class="winning-section">
+                    <h2>Player 1 Won! </h2>
+                </div>
+                <button class="restart-btn">Restart Game<i class="fas fa-redo-alt"></i></button>
             </div>
             <div class="turn-message">
                 <p>Player 1 turn</p>
             </div>
-            <div class="game-board">
+            <div class="game-board" id="game">
                 <div class="tile tile-row-border"></div>
                 <div class="tile tile-border tile-row-border"></div>
                 <div class="tile tile-row-border"></div>
@@ -40,7 +39,6 @@
                 <div class="tile"></div>
                 <div class="tile tile-border"></div>
                 <div class="tile "></div>
-                
             </div>
             
         </section>
