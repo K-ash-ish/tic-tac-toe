@@ -2,21 +2,31 @@
 const DomElements = ()=>{
     const restartBtn = document.querySelector(".restart-btn");
     const turnMessage = document.querySelector(".turn-message");
-    const gameTile = document.querySelectorAll(".tile");
+    const gameTile = Array.from(document.querySelectorAll(".tile"));
     const win = document.querySelector(".winning-section");
-
-    return{restartBtn, turnMessage, gameTile, win};
+    const elementX = document.querySelector(".fas");
+    const elementO = document.querySelector(".far");
+    return{restartBtn, turnMessage, gameTile, win, elementO, elementX};
 };
 
-const playerFactory = ()=>{
-    let player1 = "X";
-    let player2 = "O";
+const gameBoard = ()=>{
+    let board = ['', '', '', '', '', '', '', '', ''];
 }
 
-const gameBoard = (()=>{
-    
-});
+const isValid = (tile)=>{
 
+}
 
-
-DomElements();
+// placing marker and checking if marker is already present or not
+const placeMarker =( ()=>{
+    const {gameTile} = DomElements();
+    gameTile.forEach( (tile, index) => {
+        tile.addEventListener('click', (e) =>{
+            let element = e.target;
+            if(!tile.hasChildNodes()){
+                element.innerHTML = '<i class="fas fa-times fa-6x"></i>';
+            }
+            else {alert("wrong step");}
+        })
+    })
+})();
