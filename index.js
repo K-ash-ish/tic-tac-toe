@@ -6,6 +6,7 @@ const DomElements = ()=>{
     const win = document.querySelector(".winning-section");
     const elementX = document.querySelector(".fas");
     const elementO = document.querySelector(".far");
+    console.log(elementX)
     return{restartBtn, turnMessage, gameTile, win, elementO, elementX};
 };
 
@@ -19,12 +20,13 @@ const isValid = (tile)=>{
 
 // placing marker and checking if marker is already present or not
 const placeMarker =( ()=>{
-    const {gameTile} = DomElements();
+    const {gameTile, elementO, elementX} = DomElements();
+    console.log(elementX);
     gameTile.forEach( (tile, index) => {
         tile.addEventListener('click', (e) =>{
             let element = e.target;
             if(!tile.hasChildNodes()){
-                element.innerHTML = '<i class="fas fa-times fa-6x"></i>';
+                element.innerHTML = elementX;
             }
             else {alert("wrong step");}
         })
