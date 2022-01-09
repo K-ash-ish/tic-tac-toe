@@ -26,9 +26,9 @@ const placeMarker =( ()=>{
         tile.addEventListener('click', (e) =>{
             let element = e.target;
             if(!tile.hasChildNodes()){
-                element.innerHTML = elementX;
+                element.innerHTML = '<i class="fas fa-times fa-4x"></i> ';
             }
-            else {alert("wrong step");}
+            
         })
     })
 })();
