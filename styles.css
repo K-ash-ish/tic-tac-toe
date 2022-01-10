@@ -4,6 +4,10 @@
     padding: 0;
     margin: 0;
 }
+:root{
+    --tile-size: 100px;
+    --mark-size: cal(var(--tile-size) * .9);
+}
 html{
     box-sizing: border-box;
     height: 100%;
@@ -66,6 +70,14 @@ button{
     display: flex;
     justify-content: space-evenly;
 }
+/* .element-x{
+    color: #f56f46;
+    font-weight: bold;
+}
+.element-o{
+    color: #f56f46;
+    font-weight: bold;
+} */
 .winning-section{
     display: none;
     width: 100%;
@@ -87,37 +99,50 @@ button{
     display: block;
 }
 .game-board{
-    /* border: 1px solid red; */
     max-width: 25rem;
     height: 25rem;
     margin: 2em auto;
     display: grid;
-    grid-template-columns:  33% 33% 33% ;
-    grid-template-rows: 33% 33% 33% ;
-    gap: 0.5em;
-
+    grid-template-columns:  repeat(3, auto) ;
 }
 .tile{
-    min-width: 100px;
-    min-height: 100px;
+    border: 1px solid black;
+    min-width: var(--tile-size);
+    min-height: var(--tile-size);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.4s ease;
 }
-.tile-border{
-    border-right: 0.4px solid black;
-    border-left: 0.4px solid black;
-}
-.tile-row-border{
-    border-bottom: 0.4px solid black;
-}
 .tile:hover{
     cursor: pointer;
     box-shadow: 2px 2px 1px grey;
-    border-radius: 1em;
+    border-radius: 0.6em;
     transition: 1s;
 }
+.tile:first-child,
+.tile:nth-child(2),
+.tile:nth-child(3){
+    border-top: none;
+}
+.tile:nth-child( 3n + 1){
+    border-left: none;
+}
+.tile:nth-child( 3n + 3 ){
+    border-right: none;
+}
+.tile:last-child,
+.tile:nth-child(7),
+.tile:nth-child(8){
+    border-bottom: none;
+}
+/* .tile.x{
+    content: "X";
+    cursor: not-allowed;
+    font-size: 3rem;
+    color: #f56f46;
+    font-weight: bold;
+} */
 
 footer{
     bottom: 0;
