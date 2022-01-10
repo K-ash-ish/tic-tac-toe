@@ -70,14 +70,6 @@ button{
     display: flex;
     justify-content: space-evenly;
 }
-/* .element-x{
-    color: #f56f46;
-    font-weight: bold;
-}
-.element-o{
-    color: #f56f46;
-    font-weight: bold;
-} */
 .winning-section{
     display: none;
     width: 100%;
@@ -136,13 +128,12 @@ button{
 .tile:nth-child(8){
     border-bottom: none;
 }
-/* .tile.x{
-    content: "X";
+.tile.x, .tile.circle{
     cursor: not-allowed;
     font-size: 3rem;
     color: #f56f46;
     font-weight: bold;
-} */
+}
 
 footer{
     bottom: 0;
